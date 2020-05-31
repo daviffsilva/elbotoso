@@ -1,16 +1,16 @@
 const {google} = require('googleapis');
+const googleconfig = require('./google-config.json');
 const http = require('http');
 const opn = require('open');
 const destroyer = require('server-destroy');
-const tokens = require('./token.json');
 const fs = require('fs');
 
 let oauth = new google.auth.OAuth2(
-                '427189813723-0m7gkdi22alruu7k9t04rokdjgibjvks.apps.googleusercontent.com',
-                'wQWPcoMRlGOoiO18sctV8IQo',
-                'http://localhost:3000'
+                googleconfig.clientid,
+                googleconfig.secret,
+                googleconfig.callbackURI
             );
-let refresh_token = tokens.token;
+let refresh_token = googleconfig.token;
 let requiredScopes = ['https://www.googleapis.com/auth/classroom.courses.readonly', 'https://www.googleapis.com/auth/classroom.coursework.me'];
 let classroom;
 
