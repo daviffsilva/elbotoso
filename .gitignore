@@ -1,3 +1,4 @@
 config.json
 elbotoso.code-workspace
 google-config.json
+node_modules/*

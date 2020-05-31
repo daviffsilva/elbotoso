@@ -1,0 +1,31 @@
+{
+  "name": "elbotoso",
+  "version": "1.5.0",
+  "description": "Bot que conecta com o classroom e discord",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "googleapis": "^51.0.0",
+    "open": "^7.0.4",
+    "opn": "^6.0.0",
+    "server-destroy": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daviffsilva/elbotoso.git"
+  },
+  "keywords": [
+    "bot",
+    "discord"
+  ],
+  "author": "daviffsilva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daviffsilva/elbotoso/issues"
+  },
+  "homepage": "https://github.com/daviffsilva/elbotoso#readme"
+}
