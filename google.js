@@ -15,8 +15,6 @@ let requiredScopes = ['https://www.googleapis.com/auth/classroom.courses.readonl
 let classroom;
 
 module.exports = {
-    
-    
     getCourses: async () => {
         return new Promise(async (res, rej) => {
             if(refresh_token){
@@ -41,23 +39,8 @@ module.exports = {
                 courseStates: 'ACTIVE'
             }).catch(rej);
 
-            //console.log(data.data.courses);
             res(data.data.courses);
         });
-        /*
-        await res.data.courses.forEach(async (v,k)=>{
-            console.log(v.name);
-            try {   
-                let r2 = await classroom.courses.courseWork.list({
-                    courseId: v.id,
-                    orderBy: 'updateTime desc'
-                });
-                courseById[v.id] = ({'name': v.name, 'work': (r2.data.courseWork)});
-                fs.writeFileSync('./asd.json', JSON.stringify(courseById));  
-            } catch (error) {}
-        });*/
-
-
     },
 
     getWorkByCourseId: (id) => {
@@ -74,8 +57,6 @@ module.exports = {
             }).then(data => {
                 res(data.data.courseWork);
             }).catch(rej);
-            
-            
         });
     },
 
